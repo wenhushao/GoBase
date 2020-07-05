@@ -40,7 +40,7 @@ func addRecord(Db *sqlx.DB) {
 
 func updateRecord(Db *sqlx.DB) {
 	//更新uid=1的username
-	result, err := Db.Exec("update user set username = 'anson' where userid = 1")
+	result, err := Db.Exec("update user set username = 'anson' where userid = 2")
 	if err != nil {
 		fmt.Printf("update faied, error:[%v]", err.Error())
 		return
