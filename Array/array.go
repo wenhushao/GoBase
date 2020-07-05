@@ -11,7 +11,7 @@ func main() {
 	}
 	fmt.Println()
 	fmt.Println("strings数组为：")
-	strings := []string{"Apple","Google","Microsoft"}
+	strings := []string{"Apple", "Google", "Microsoft"}
 	for i := 0; i < len(strings); i++ {
 		fmt.Print(strings[i], " ")
 	}
