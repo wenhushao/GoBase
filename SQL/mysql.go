@@ -38,8 +38,8 @@ func addRecord(Db *sqlx.DB) {
 	}
 }
 
+//更新uid=2的username
 func updateRecord(Db *sqlx.DB) {
-	//更新uid=1的username
 	result, err := Db.Exec("update user set username = 'anson' where userid = 2")
 	if err != nil {
 		fmt.Printf("update faied, error:[%v]", err.Error())
@@ -49,8 +49,8 @@ func updateRecord(Db *sqlx.DB) {
 	fmt.Printf("update success, affected rows:[%d]\n", num)
 }
 
+//删除uid=2的数据
 func deleteRecord(Db *sqlx.DB) {
-	//删除uid=2的数据
 	result, err := Db.Exec("delete from user where userid = 2")
 	if err != nil {
 		fmt.Printf("delete faied, error:[%v]", err.Error())
@@ -59,6 +59,8 @@ func deleteRecord(Db *sqlx.DB) {
 	num, _ := result.RowsAffected()
 	fmt.Printf("delete success, affected rows:[%d]\n", num)
 }
+
+//查询数据
 func queryData(Db *sqlx.DB) {
 	rows, err := Db.Query("select * from user")
 	if err != nil {
