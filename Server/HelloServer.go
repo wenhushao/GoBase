@@ -7,7 +7,7 @@ import (
 type helloHandler struct{}
 
 func (h *helloHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Hello, World For Go Server!"))
+	w.Write([]byte("<h1>Hello, World For Go Server!<h1>"))
 }
 
 func main() {

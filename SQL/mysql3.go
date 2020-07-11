@@ -26,7 +26,7 @@ func connectMysql() *sqlx.DB {
 }
 
 //添加数据
-func addRecord(Db *sqlx.DB) {
+func add(Db *sqlx.DB) {
 	for i := 0; i < 2; i++ {
 		result, err := Db.Exec("insert into user  values(?,?,?)", 2, "johny", "123456")
 		if err != nil {
@@ -39,7 +39,7 @@ func addRecord(Db *sqlx.DB) {
 }
 
 //更新uid=2的username
-func updateRecord(Db *sqlx.DB) {
+func update(Db *sqlx.DB) {
 	result, err := Db.Exec("update user set username = 'anson' where userid = 2")
 	if err != nil {
 		fmt.Printf("update faied, error:[%v]", err.Error())
@@ -50,7 +50,7 @@ func updateRecord(Db *sqlx.DB) {
 }
 
 //删除uid=2的数据
-func deleteRecord(Db *sqlx.DB) {
+func delete(Db *sqlx.DB) {
 	result, err := Db.Exec("delete from user where userid = 2")
 	if err != nil {
 		fmt.Printf("delete faied, error:[%v]", err.Error())
@@ -61,7 +61,7 @@ func deleteRecord(Db *sqlx.DB) {
 }
 
 //查询数据
-func queryData(Db *sqlx.DB) {
+func query(Db *sqlx.DB) {
 	rows, err := Db.Query("select * from user")
 	if err != nil {
 		fmt.Printf("query faied, error:[%v]", err.Error())
@@ -86,8 +86,8 @@ func queryData(Db *sqlx.DB) {
 func main() {
 	var Db *sqlx.DB = connectMysql()
 	defer Db.Close()
-	//addRecord(Db)
-	//updateRecord(Db)
-	//deleteRecord(Db)
-	queryData(Db)
+	//add(Db)
+	//update(Db)
+	//delete(Db)
+	query(Db)
 }
