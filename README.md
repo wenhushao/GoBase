@@ -1,4 +1,4 @@
-# Go Lang Base Program
+# Go Lang Demo Program
 
 说明(Instruction): 
 
