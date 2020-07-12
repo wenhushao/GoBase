@@ -15,5 +15,4 @@ func main() {
 	for i := 0; i < len(strings); i++ {
 		fmt.Print(strings[i], " ")
 	}
-
 }
