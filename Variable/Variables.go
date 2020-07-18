@@ -4,6 +4,7 @@ import "fmt"
 
 func main() {
 	//变量
+	//var 变量名字 类型 = 表达式
 
 	//var x int32
 	//x = 10
