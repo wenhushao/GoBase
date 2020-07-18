@@ -4,6 +4,9 @@ import "fmt"
 
 func main() {
 	//变量
+
+	//var x int32
+	//x = 10
 	x := 10
 	println("x=", x)
 	//fmt.Println("x=",x)
