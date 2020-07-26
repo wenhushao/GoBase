@@ -4,4 +4,4 @@
 
 项目环境(Project Environment): 
 
-Go 1.14
+Go v1.14
