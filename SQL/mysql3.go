@@ -12,7 +12,7 @@ var (
 	ipAddrees string = "127.0.0.1"
 	port      int    = 3306
 	dbName    string = "test"
-	charset   string = "utf8"
+	charset   string = "utf8mb4"
 )
 
 //连接数据库
